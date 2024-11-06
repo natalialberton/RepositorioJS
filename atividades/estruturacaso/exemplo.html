@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> CASO - Exemplo </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Estrutura CASO - Exemplo </h2>
+                <div id="configDescricao">
+                    <p> Nesta atividade, o usuário digita um número e o programa retorna um alerta dizendo o nome do mês 
+                        correspondente ao número digitado. Igual a atividade 6 da Estrutura SE, exceto que dessa vez usamos
+                        a Estrutura CASO.
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadmes {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadmes input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadmes button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+
+		            <title> Estrutura CASO Javascript </title>
+	            </head>
+	            <body>
+                    <section>
+                        <h2> Atividade Exemplo - Número e Mês </h2>
+                        <font face="arial">
+                            <form name="frmmes" action="#" method="get" onsubmit="return validaFormulario()">
+                                <fieldset class="cadmes">
+                                    <legend> Entrada de Dados </legend>
+                                <br>
+                                    <label for="mes"> Mês de 1 a 12: </label>
+                                    <input type="text" name="txtmes" id="mes"><br>
+                                <br>
+                                    <button type="reset"> Limpar </button>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        function validaFormulario() {
+	
+                            if(document.frmmes.txtmes.value=="") {
+                                alert("Preencha o campo necessário!");
+                                document.frmmes.txtmes.focus();
+                                return false;
+                            }
+                            
+                            else {
+                                let mes=parseInt(document.frmmes.txtmes.value);
+                                /*Switch = Escolha (portugol)*/
+                                switch(mes) {
+                                    case 1:
+                                        //alert("O mês é janeiro!");
+                                        /*Break = Pare (portugol)*/
+                                        console.log("O mês é janeiro!");
+                                        break;
+                                    case 2:
+                                        //alert("O mês é fevereiro!");
+                                        console.log("O mês é fevereiro!");
+                                        break;
+                                    case 3:
+                                        //alert("O mês é março!");
+                                        console.log("O mês é março!");
+                                        break;
+                                    case 4:
+                                        //alert("O mês é abril!");
+                                        console.log("O mês é abril!");
+                                        break;
+                                    case 5:
+                                        //alert("O mês é maio!");
+                                        console.log("O mês é maio!");
+                                        break;
+                                    case 6:
+                                        //alert("O mês é junho!");
+                                        console.log("O mês é junho!");
+                                        break;
+                                    case 7:
+                                        //alert("O mês é julho!");
+                                        console.log("O mês é julho");
+                                        break;
+                                    case 8:
+                                        //alert("O mês é agosto!");
+                                        console.log("O mês é agosto!");
+                                        break;
+                                    case 9:
+                                        //alert("O mês é setembro!");
+                                        console.log("O mês é setembro!");
+                                        break;
+                                    case 10:
+                                        //alert("O mês é outubro!");
+                                        console.log("O mês é outubro!");
+                                        break;
+                                    case 11:
+                                        //alert("O mês é novembro!");
+                                        console.log("O mês é novembro!");
+                                        break;
+                                    case 12:
+                                        //alert("O mês é dezembro!");
+                                        console.log("O mês é dezembro!");
+                                        break;
+                                    /*Default = Caso contrário (portugol)*/
+                                    default:
+                                        //alert("Digite um número válido!");
+                                        console.log("Digite um número válido!");
+                                        document.frmmes.txtmes.focus();
+                                        break;
+                                }
+                                return false;
+                            }
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

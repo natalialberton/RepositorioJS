@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> SE - Atividade 2 </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Estrutura SE - Atividade 2 </h2>
+                <div id="configDescricao">
+                    <p> Além da validação de formulário, este exercício verifica se o número digitado pelo usuário é par ou ímpar, utilizando
+                        o símbolo %, que indica o resultado do resto de divisão de um número pelo outro. 
+                        Exemplo: 10 % 2 = 0, já que 10/2 é igual a 5 e não sobra nada.
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadinteiro {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadinteiro input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadinteiro button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+
+		            <title> Estrutura SE Javascript </title>
+	            </head>
+	            <body>
+                    <section>
+                        <h2> Atividade Número Inteiro </h2>
+                        <font face="arial">
+                            <form name="frmnumint" action="#" method="get" onsubmit="return validaFormulario()">
+                                <fieldset class="cadinteiro">
+                                    <legend> Entrada de Dados </legend>
+                                    <br>
+                                    <label for="numint"> Número Inteiro : </label>
+                                    <input type="text" name="txtnumint" id="numint"><br>
+                                    <br>
+                                    <button type="reset"> Limpar </button>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        function validaFormulario() {
+                            if(document.frmnumint.txtnumint.value=="") {
+                                alert("Preencha o campo Número Inteiro");
+                                document.frmnumint.txtnumint.focus();
+                                return false;
+                            } else {
+                                let numint=document.frmnumint.txtnumint.value;
+                                if(numint%2==0) {
+                                    alert("O número digitado é par");
+                                } else {
+                                    alert("O número digitado é ímpar");
+                                }
+                            }
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> MATRIZ </title>
+        <link rel="stylesheet" type="text/css" href="../css/geral.css">
+        <script src="../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="se.html"> Se </a>
+                        <a href="caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="enquanto.html"> Enquanto </a>
+                        <a href="facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="vetorUni.html"> Unidimensionais </a>
+                        <a href="vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> MATRIZ </h2>
+                <div id="configDescricao">
+                    <p> Vetores bidimensionais funcionam como planilhas: eles conseguem guardar informações em linhas e colunas. Para declarar uma matriz,
+                        devemos definir sua dimensão, definir a variável matriz com o "Array" e definir as variáveis que correspondem às linhas e colunas 
+                        da matriz. Essa explicação fica melhor exemplificada no exemplo ao lado.
+                    </p>
+                </div>
+
+                <div class="configDivAtividades">
+                    <h3> Atividades </h3>
+                    <div class="organizaColunas">
+                        <div class="coluna1">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Exemplo </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/exemplo.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Alimentando uma matriz 3x3 </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 1 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/atividade1.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Multiplicando uma matriz 2x2 </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 2 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/atividade2.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Alimentando uma matriz 3x4 </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 1 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio1.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> E se eu somar os valores dessa linha? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 2 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio2.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Os elementos da matriz correspondem à soma dos índices de sua posição </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 3 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio3.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Faturamento semestral de uma loja </p>
+                            </div>
+                        </div>
+
+                        <div class="coluna2">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 4 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio4.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Qual linha você quer? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 5 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio5.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Renda famíliar de um prédio </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 6 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio6.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Soma dos elementos em cada linha </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 7 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio7.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Soma de todos os elementos </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 8 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio8.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Uso de duas matrizes: original e dobro </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 9 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetorbi/desafio9.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Exibe os elementos nas diagonais da matriz </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> SE - Atividade 4 </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Estrutura SE - Atividade 4 </h2>
+                <div id="configDescricao">
+                    <p> A ideia é parecida com a da Atividade 3, validando os campos e calculando a média das notas. O adicional desta atividade
+                        é a estrutura "else if", para verificar se o usuário passou (média maior do que 7), foi reprovado (média menor do que 5),
+                        OU ficou em exame (média entre 7 e 5).
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadmedialuno {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadmedialuno input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadmedialuno button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+
+		            <title> Estrutura SE Javascript </title>
+	            </head>
+	            <body>
+                    <section>
+                        <h2> Atividade 4 - Cálculo Média de Aluno </h2>
+                        <font face="arial">
+                            <form name="frmnotas" action="#" method="get" onsubmit="return validaFormulario()">
+                                <fieldset class="cadmedialuno">
+                                    <legend> Entrada de Dados </legend>
+                                <br>
+                                    <label for="nota1"> Nota 1: </label>
+                                    <input type="text" name="txtnota1" id="nota1"><br>
+                                <br>
+                                    <label for="nota2"> Nota 2: </label>
+                                    <input type="text" name="txtnota2" id="nota2"><br>
+                                <br>
+                                    <label for="nota3"> Nota 3: </label>
+                                    <input type="text" name="txtnota3" id="nota3"><br>
+                                <br>
+                                    <button type="reset"> Limpar </button>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        function validaFormulario() {
+	
+                            if(document.frmnotas.txtnota1.value=="") {
+                                    alert("Preencha o campo da primeira nota");
+                                    document.frmnotas.txtnota1.focus();
+                                    return false;
+                            }
+                            
+                                else if(document.frmnotas.txtnota2.value=="") {
+                                        alert("Preencha o campo da segunda nota");
+                                        document.frmnotas.txtnota2.focus();
+                                        return false;
+                                }
+                            
+                                    else if(document.frmnotas.txtnota3.value=="") {
+                                            alert("Preencha o campo da terceira nota");
+                                            document.frmnotas.txtnota3.focus();
+                                            return false;
+                                    }
+                                                  
+                            /*Convertendo a nota1 em numérico com casas decimais (float)*/
+                            let nota1=parseFloat(document.frmnotas.txtnota1.value);
+                            let nota2=parseFloat(document.frmnotas.txtnota2.value);
+                            let nota3=parseFloat(document.frmnotas.txtnota3.value);
+                            let media=(nota1 + nota2 + nota3) / 3;
+                            
+                            /*Se os valores forem NaN, ou seja, não forem numéricos, vai aparecer a mensagem*/	
+                            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                                    alert ("Insira número válido!");
+                                    return false;
+                            }
+                            
+                                else if (media >= 7) {
+                                        /*O '.toFixed' arredonda, sendo que o parênteses mostra a qtd de casas decimais que vai aparecer pro usuário*/
+                                        alert("A média foi de:" + " " + media.toFixed(2));
+                                        alert("Passada! :O");
+                                        return true;
+                                }
+                            
+                                    else if (media < 5) {
+                                            alert("A média foi de:" + " " + media.toFixed(2));
+                                            alert("Reprovado... :(");
+                                            return true;
+                                    }
+                                
+                                        else {
+                                            alert("A média foi de:" + " " + media.toFixed(2));
+                                            alert("Em exame :(");
+                                            return true;
+                                        }
+                        
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

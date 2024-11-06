@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> SE - Exemplo </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Estrutura SE - Exemplo </h2>
+                <div id="configDescricao">
+                    <p> Neste primeiro exercício, aprendemos a usar a estrutura SE para validar campos de resposta em um formulário.
+                        Desta forma, se o usuário não preencher um campo, aparecerá um alerta pedindo para ele preenchê-lo.
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadbasico {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadbasico input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadbasico button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+                    
+		            <title> ESTRUTURA SE JAVASCRIPT </title>
+	            </head>
+	            <body>
+		            <section>
+			            <h2> ESTRUTURAS SE (if()) </h2>
+			            <font face="arial">
+			                <form name="frmcadastro" action="#" method="get" onsubmit="return validaFormulario()">		
+				                <fieldset class="cadbasico">
+					                <legend> Dados Gerais </legend>
+					            <br>
+						            <label for="nome"> Nome: </label>
+						            <input type="text" name="txtnome" id="nome"> <br>
+					            <br>
+						            <label for="telefone"> Telefone: </label>
+						            <input type="text" name="txtfone" id="telefone"> <br>
+					            <br>
+                                    <label for="email"> E-mail: </label>
+                                    <input type="email" name="txtmail" id="email"> <br>
+                                    <button type="reset"> Limpar </button>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                             </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        /*Criando a função validaFormulario*/
+                        function validaFormulario() {
+                            /*Se no documento frmcadastro, no campo txtnome, tem o seu valor vazio-*/
+                            if(document.frmcadastro.txtnome.value=="") {
+                                alert("Campo nome deve ser preenchido");
+                                document.frmcadastro.txtnome.focus();
+                                return false;
+                            }
+                                                
+                            else if(document.frmcadastro.txtfone.value=="") {
+                                alert("Campo telefone deve ser preenchido");
+                                document.frmcadastro.txtfone.focus();
+                                return false;
+                            }
+                                                
+                            else if(document.frmcadastro.txtmail.value=="") {
+                                alert("Campo e-mail deve ser preenchido");
+                                document.frmcadastro.txtmail.focus();
+                                return false;
+                            }
+                                                
+                            return true;
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

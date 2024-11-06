@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> MATRIZ - Desafio 5 </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> MATRIZ - Desafio 5 </h2>
+                <div id="configDescricao">
+                    <p> Neste desafio, o usuário informa a renda de cada família de um edifício. O programa imprime a renda média e a renda total dessas famílias.
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadnum {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadnum input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadnum button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+
+		            <title> MATRIZES Javascript </title>
+	            </head>
+	            <body>
+                    <section>
+                        <h2> Desafio 5 - Renda do Edifício </h2>
+                        <font face="arial">
+                            <form name="frmnum" action="#" method="get" onsubmit="return validaFormulario()">
+                                <fieldset class="cadnum">
+                                    <legend> Entrada de Dados </legend>
+                                <br>
+                                <legend> O síndico do prédio "Balança mais não cai" solicitou uma solução que armazene em uma matriz a renda de cada família
+                                         moradora de um edifício, calculando a média e o total de renda do mesmo. O prédio possui 6 andares, com 4 apartamentos
+                                         em cada andar. </legend>
+                                <br>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        function validaFormulario() {
+                            let dimensaoAndar = 6;
+                            let dimensaoAp = 4;
+                            let renda = Array(dimensaoAndar);
+                            let i;
+                            let andar, ap;
+                            let rendaTotal = 0
+                            let rendaMedia = 0
+                            
+                            for(i=0; i<renda.length; i++)
+                            {
+                                renda[i] = Array(dimensaoAndar)
+                            }
+                            
+                            for(andar=0; andar<dimensaoAndar; andar++)
+                            {
+                                for(ap=0; ap<dimensaoAp; ap++)
+                                {
+                                    renda[andar][ap] = parseFloat(prompt("Digite a renda da família no andar " +andar+ " e apartamento " +ap));
+                                    
+                                    rendaTotal += renda[andar][ap]
+                                }
+                            }
+                            
+                            rendaMedia = rendaTotal / (dimensaoAndar * dimensaoAp)
+                            
+                            console.log("--- RENDA FAMILIAR DO BALANÇA MAS NÃO CAI ---");
+                            console.log("Renda total: " +rendaTotal);
+                            console.log("Média de renda: " +(rendaMedia).toFixed(2));
+                            console.log(" ");
+                            console.log("Renda por apartamento: ");
+                            
+                            for(andar=0; andar<dimensaoAndar; andar++)
+                            {
+                                for(ap=0; ap<dimensaoAp; ap++)
+                                {
+                                    console.log("Andar " +andar+ " e apartamento " +ap+ ": " +(renda[andar][ap]).toFixed(2));
+                                }
+                                console.log(" ");
+                            }
+                            
+                            return false;
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

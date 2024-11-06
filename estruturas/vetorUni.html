@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> VETOR </title>
+        <link rel="stylesheet" type="text/css" href="../css/geral.css">
+        <script src="../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="se.html"> Se </a>
+                        <a href="caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="enquanto.html"> Enquanto </a>
+                        <a href="facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="vetorUni.html"> Unidimensionais </a>
+                        <a href="vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> VETOR </h2>
+                <div id="configDescricao">
+                    <p> Vetores unidimensionais são variáveis que podem guardar um número limitado de informações do mesmo tipo. Com a estrutura PARA, é
+                        possível alimentar todas as posições do vetor, como é demonstrado no exemplo ao lado.
+                    </p>
+                </div>
+
+                <div class="configDivAtividades">
+                    <h3> Atividades </h3>
+                    <div class="organizaColunas">
+                        <div class="coluna1">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Exemplo </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/exemplo.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Alimentando um vetor unidimensional </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 1 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/atividade1.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Notas boas </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 2 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/atividade2.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Quantas notas boas? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 0 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio0.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Posição ao quadrado </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 1 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio1.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Posição ímpar </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 2 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio2.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Busca de um valor: está ou não na base de dados? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 3 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio3.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> O valor digitado é par? </p>
+                            </div>
+                        </div>
+
+                        <div class="coluna2">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 4 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio4.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Qual o maior valor? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 5 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio5.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Ordem contrária da posição </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 6 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio6.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Qual o menor valor? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 7 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio7.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Uso de dois vetores: número a ser multiplicado e resultado </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 8 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio8.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Uso de três vetores: número, número e resultado </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 9 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio9.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Uso de três vetores: nota, nota e média do aluno </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Desafio 10 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/vetoruni/desafio10.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Temperaturas do ano </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

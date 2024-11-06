@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> MATRIZ - Desafio 3 </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> MATRIZ - Desafio 3 </h2>
+                <div id="configDescricao">
+                    <p> Neste desafio, criamos um programa que funciona como uma análise do faturamento semestral de uma loja. Para isso, foi criada
+                        uma matriz 6x4, e duas variáveis que indicassem o total de vendas geral e o total de cada mês.
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadnum {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadnum input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadnum button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+
+		            <title> MATRIZES Javascript </title>
+	            </head>
+	            <body>
+                    <section>
+                        <h2> Desafio 3 - Vendas </h2>
+                        <font face="arial">
+                            <form name="frmnum" action="#" method="get" onsubmit="return validaFormulario()">
+                                <fieldset class="cadnum">
+                                    <legend> Entrada de Dados </legend>
+                                <br>
+                                <legend> Aqui será calculado um programa que carregará os valores de vendas de uma loja ao longo do primeiro semestre
+                                         de 2022. Para isso, será construída uma matriz 6x4. Com isso, serão representados os primeiros 6 meses do ano,
+                                         sendo que cada mês é formado por 4 semanas (6 meses x 4 semanas). Ao final, será mostrado o faturamento da loja
+                                         da seguinte forma: <br>
+                                         - Total de vendas do semestre <br>
+                                         - Total vendido em cada mês </legend>
+                                <br>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        function validaFormulario() {
+                            let dimensaoMes=6
+                            let dimensaoSemana=4
+                            let vendas=Array(dimensaoMes)
+                            let i
+                            let mes, semana
+                            let vendasSemestre=0
+                            let vendasMes
+                            
+                            for(i=0; i<vendas.length; i++)
+                            {
+                                vendas[i] = Array(dimensaoMes)
+                            }
+                            
+                            for(mes=0; mes<dimensaoMes; mes++)
+                            {
+                                for(semana=0; semana<dimensaoSemana; semana++)
+                                {
+                                    vendas[mes][semana]=parseFloat(prompt("Informe o valor das vendas do mês " +mes+ " e da semana " +semana));
+                                    console.log("O valor do mês " +mes+ " e semana " +semana+ " foi de: " +vendas[mes][semana]);
+                                    
+                                    vendasSemestre += vendas[mes][semana]
+                                }
+                                console.log(" ");
+                            }
+                            
+                            console.log("----- RELATÓRIO DE VENDAS -----");
+                            console.log("Total de vendas no semestre: " +vendasSemestre);
+                            
+                            for(mes=0; mes<dimensaoMes; mes++)
+                            {
+                                vendasMes = 0
+                                for(semana=0; semana<dimensaoSemana; semana++)
+                                {
+                                    vendasMes += vendas[mes][semana]
+                                }
+                                console.log("Total de vendas no mês " +mes+ ": " +vendasMes);
+                            }
+                            
+                            return false;
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

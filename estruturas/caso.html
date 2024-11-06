@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Estrutura CASO </title>
+        <link rel="stylesheet" type="text/css" href="../css/geral.css">
+        <script src="../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="se.html"> Se </a>
+                        <a href="caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="enquanto.html"> Enquanto </a>
+                        <a href="facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="vetorUni.html"> Unidimensionais </a>
+                        <a href="vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Estrutura Condicional CASO </h2>
+                <div id="configDescricao">
+                    <p> A estrutura CASO no JavaScript é usada dentro de uma declaração "switch" para permitir a execução condicional de código 
+                        com base no valor de uma expressão. O "switch" é uma alternativa ao uso de múltiplas instruções "if" e "else if" e pode 
+                        tornar o código mais legível quando há muitas condições a serem verificadas.
+                    </p>
+                </div>
+
+                <div class="configDivAtividades">
+                    <h3> Atividades </h3>
+                    <div class="organizaColunas">
+                        <div class="coluna1">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Exemplo </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturacaso/exemplo.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Diga-me um número que digo-te o mês a que ele corresponde </p>
+                            </div>
+                        </div>
+
+                        <div class="coluna2">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 1 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturacaso/atividade1.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Idade de bebê, criança, adolescente ou adulto? </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

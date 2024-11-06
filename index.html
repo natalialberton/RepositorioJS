@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> INÍCIO </title>
+        <link rel="stylesheet" type="text/css" href="css/geral.css">
+        <script src="js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="index.html"> Início </a>
+                    <button class="botaoMenu"onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/se.html"> Se </a>
+                        <a href="estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/enquanto.html"> Enquanto </a>
+                        <a href="estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Propósito da Atividade </h2>
+                <div id="configDiv">
+                    <p id="conteudoP"> A ideia deste projeto é criar um repositório onde se possa não apenas guardar, como também executar códigos em HTML
+                        no próprio site em que eles se encontram. O objetivo principal seria a praticidade para rever os conteúdos, de forma
+                        que todos os conceitos básicos de Lógica de Programação fiquem armazenados em um único local, sem que o usuário tenha
+                        que abrir pasta por pasta em uma área de trabalho para achar o exemplo de que precisa. Tendo isso em mente, os conteúdos
+                        aqui reunidos dizem respeito ao conhecimento que obtive nos primeiros meses em contato com as linguagens utilizadas, e
+                        visam oferecer uma pequena base para futuras consultas, se assim forem necessárias.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

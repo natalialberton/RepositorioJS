@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> VETOR - Desafio 7 </title>
+        <link rel="stylesheet" type="text/css" href="../../css/geral.css">
+        <script src="../../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/se.html"> Se </a>
+                        <a href="../../estruturas/caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/enquanto.html"> Enquanto </a>
+                        <a href="../../estruturas/facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="../../estruturas/para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="../../estruturas/vetorUni.html"> Unidimensionais </a>
+                        <a href="../../estruturas/vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> VETOR - Desafio 7 </h2>
+                <div id="configDescricao">
+                    <p> Neste desafio, o usuário informa os valores para um vetor e um número aleatório que multiplicará esses valores. O resultado
+                        dessas multiplicações ficará armazenado em outro vetor, cujos valores serão informados no fim do programa.
+                    </p>
+                </div>
+
+                <!--Adicionando o textarea que irá conter a atividade realizada-->
+                <form>
+                    <input class="botaoExecutaPagina" type="button" value="Executar Página" onclick="document.write(fonte.value);">
+                    <br>
+                    <textarea name="fonte" cols="130" rows="30">
+    
+            <!DOCTYPE html>
+            <html lang="pt-br">
+	            <head>
+		            <meta charset="UTF-8">
+                    <style>
+                    /*Configurações Gerais*/
+                    section {
+                        margin-top: 0px auto;
+                    }
+                                        
+                    .cadnum {
+                        width: 300px;
+                        margin: 0px auto;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                                        
+                    .cadnum input {
+                        margin: 5px;
+                        width: 100%;
+                        padding: 5px auto;
+                    }
+                                        
+                    .cadnum button {
+                        width: 30%;
+                        margin: 1 10%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                                        
+                    label {
+                        float: left;
+                    }
+                                        
+                    h2 {
+                        text-align: center;
+                        margin-top: 0px;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                    }
+                    </style>
+
+		            <title> VETORES Javascript </title>
+	            </head>
+	            <body>
+                    <section>
+                        <h2> Desafio 7 - Multiplicação: 2 vetores </h2>
+                        <font face="arial">
+                            <form name="frmnum" action="#" method="get" onsubmit="return validaFormulario()">
+                                <fieldset class="cadnum">
+                                    <legend> Entrada de Dados </legend>
+                                <br>
+                                    <legend> A empresa "SÓ CÁLCULO SEM PRECONCEITO" necessita agora de uma solução que alimente um vetor com 5 valores inteiros
+                                             e também que solicite ao usuário a entrada de dados de um valor inteiro. Após as devidas entradas de dados, o programa
+                                             deve multiplicar o valor informado pelo usuário por cada elemento do vetor, sendo que o resultado deste cálculo deve ser
+                                             armazenado em outro vetor, em suas respectivas posições. Como resultado deseja-se a impressão dos valores dos resultados
+                                             dos cálculos armazenados no segundo vetor. </legend>
+                                <br>
+                                    <button type="submit"> Enviar </button>
+                                </fieldset>
+                            </form>
+                        </font>
+                    </section>
+
+                    <script type="text/javascript">
+                        function validaFormulario() {
+                            let num=[]
+                            let resultado=[]
+                            let i
+                            let multiplicador
+                            
+                            for(i=0; i<5; i++)
+                            {
+                                num[i]=parseInt(prompt("Digite um número inteiro"));
+                            }
+                            
+                            multiplicador=parseInt(prompt("Digite o número que multiplicará os valores digitados a seguir"));
+                            
+                            for(i=0; i<5; i++)
+                            {
+                                resultado[i] = num[i] * multiplicador
+                                console.log(num[i] + " x " + multiplicador + " = " + resultado[i]);
+                            }
+                            return false;
+                        }
+                    </script>
+                </body>
+            </html>
+
+                    </textarea>
+                    <br>
+                    <br>
+                </form>
+                
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>

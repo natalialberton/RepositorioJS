@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title> Estrutura SE </title>
+        <link rel="stylesheet" type="text/css" href="../css/geral.css">
+        <script src="../js/geral.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="iconeMenu">
+                    <!-- Adicionando um ícone animado para abrir o menu de navegação -->
+                    <div class="barrasIconeMenu" onclick="animaIconeMenu(this)">
+                        <div id="barra1"></div>
+                        <div id="barra2"></div>
+                        <div id="barra3"></div>
+                    </div>
+                </div>
+
+                <!-- Adicionando configuração para abrir um menu lateral -->
+                <div id="navegaMenu" class="menuLateral">
+                    <a href="../index.html"> Início </a>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas Condicionais </button>
+                    <div class="estruturasLinks">
+                        <a href="se.html"> Se </a>
+                        <a href="caso.html"> Caso </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Estruturas de Repetição </button>
+                    <div class="estruturasLinks">
+                        <a href="enquanto.html"> Enquanto </a>
+                        <a href="facaEnquanto.html"> Faça...Enquanto </a>
+                        <a href="para.html"> Para </a>
+                    </div>
+                    <button class="botaoMenu" onclick="abreEstruturasLinks()"> Vetores </button>
+                    <div class="estruturasLinks">
+                        <a href="vetorUni.html"> Unidimensionais </a>
+                        <a href="vetorBi.html"> Bidimensionais </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="cabecalho">
+                <h1> Trindade Front-End </h1>
+                <img src="../imgs/logo.png" alt="Logo do Site" title="Logo do Site">
+            </div>
+        </header>
+
+        <section>
+            <div id="corpo">
+                <h2> Estrutura Condicional SE </h2>
+                <div id="configDescricao">
+                    <p> A estrutura condicional SE no JavaScript permite executar blocos de código com base em condições específicas. De maneira simples,
+                        se (if) uma condição é verdadeira, o bloco de código dentro dela será executado. Senão (else), as ações dentro de "if" são puladas
+                        e o que está dentro de "else" será executado. É também possível utilizar estruturas "else if" para  caso de múltiplas condições diferentes.
+                    </p>
+                </div>
+
+                <div class="configDivAtividades">
+                    <h3> Atividades </h3>
+                    <div class="organizaColunas">
+                        <div class="coluna1">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Exemplo </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/exemplo.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Validação dos campos de um formulário simples </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 1 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/atividade1.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Se a pessoa for maior de idade recebe o alerta A, senão, recebe o alerta B </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 2 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/atividade2.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Par ou ímpar? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 3 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/atividade3.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Média de aluno: passou ou reprovou? </p>
+                            </div>
+                        </div>
+
+                        <div class="coluna2">
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 4 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/atividade4.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Média de aluno: passou, reprovou ou ficou em exame? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 5 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/atividade5.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Qual número é maior? </p>
+                            </div>
+                            <button class="botaoAtividades" onclick="abreAtividades()"> Atividade 6 </button>
+                            <div class="atividadeConteudo">
+                                <a href="../atividades/estruturase/atividade6.html" target="_blank"> Ver Código </a>
+                                <p class="descricaoAtividade"> Diga-me um número que digo-te o mês a que ele corresponde </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer> Copyright &copy; T DESN 2024/2 - Natalí Alberton Grolli </footer>
+    </body>
+</html>
